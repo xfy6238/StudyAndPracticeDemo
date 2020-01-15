@@ -14,9 +14,22 @@
 
 @implementation ViewController
 
+//单例创建
++(UIViewController *)shareViewController{
+    static dispatch_once_t onceToken;
+    static ViewController *controller = nil;
+    dispatch_once(&onceToken, ^{
+        controller = [[ViewController alloc]init];
+        //或者通过xib创建;
+    });
+    return controller;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+   
 }
 
 

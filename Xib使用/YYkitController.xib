@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YYkitController">
+            <connections>
+                <outlet property="leftBtnWidth" destination="LLV-T4-qVf" id="MLh-67-bf3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yyLab" destination="w0V-NK-0z3" id="vl0-OL-Jt2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0V-NK-0z3" customClass="YYLabel">
+                    <rect key="frame" x="8" y="64" width="40" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="77Y-QA-ky7"/>
+                        <constraint firstAttribute="width" constant="40" id="pVT-ea-4DE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBC-In-TlN">
+                    <rect key="frame" x="0.0" y="84" width="375" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtZ-Vr-0Kg">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="187.5" id="LLV-T4-qVf"/>
+                            </constraints>
+                            <state key="normal" title="第一个"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRP-9u-icK">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="100"/>
+                            <state key="normal" title="第二个"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xRP-9u-icK" firstAttribute="top" secondItem="sBC-In-TlN" secondAttribute="top" id="457-MT-XxO"/>
+                        <constraint firstItem="EtZ-Vr-0Kg" firstAttribute="top" secondItem="sBC-In-TlN" secondAttribute="top" id="85L-Vf-2un"/>
+                        <constraint firstAttribute="trailing" secondItem="xRP-9u-icK" secondAttribute="trailing" id="C3t-LQ-aP3"/>
+                        <constraint firstAttribute="bottom" secondItem="EtZ-Vr-0Kg" secondAttribute="bottom" id="Iyg-Ow-LrL"/>
+                        <constraint firstAttribute="height" constant="100" id="JHT-pV-SN5"/>
+                        <constraint firstAttribute="bottom" secondItem="xRP-9u-icK" secondAttribute="bottom" id="U3L-JF-yu0"/>
+                        <constraint firstItem="xRP-9u-icK" firstAttribute="leading" secondItem="EtZ-Vr-0Kg" secondAttribute="trailing" id="sTI-jh-q1F"/>
+                        <constraint firstItem="EtZ-Vr-0Kg" firstAttribute="leading" secondItem="sBC-In-TlN" secondAttribute="leading" id="yei-MS-2hD"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC1-Fq-jZp">
+                    <rect key="frame" x="171.5" y="318.5" width="31" height="30"/>
+                    <state key="normal" title="更新"/>
+                    <connections>
+                        <action selector="btnAction:" destination="-1" eventType="touchUpInside" id="zCg-gY-bfM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="w0V-NK-0z3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="I8t-Ky-SLf"/>
+                <constraint firstItem="oC1-Fq-jZp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vr8-ui-A9h"/>
+                <constraint firstItem="sBC-In-TlN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YY6-5D-4jB"/>
+                <constraint firstAttribute="trailing" secondItem="sBC-In-TlN" secondAttribute="trailing" id="Yjd-X8-67x"/>
+                <constraint firstItem="sBC-In-TlN" firstAttribute="top" secondItem="w0V-NK-0z3" secondAttribute="bottom" id="b8y-HF-ZZU"/>
+                <constraint firstItem="oC1-Fq-jZp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bBE-w5-Ehl"/>
+                <constraint firstItem="w0V-NK-0z3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="k5D-cb-m1r"/>
+            </constraints>
+            <point key="canvasLocation" x="19.5" y="331.5"/>
+        </view>
+    </objects>
+</document>

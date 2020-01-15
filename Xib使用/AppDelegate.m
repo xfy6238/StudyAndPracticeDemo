@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "RootController.h"
+#import "FirstController.h"
+#import "ThirdController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    RootController *controller = [[RootController alloc]initWithNibName:@"RootController" bundle:nil];
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:controller];
+    //隐式加载
+
+//    FirstController *controller = [[FirstController alloc]init];
+    
+//    ThirdController *controller = [[ThirdController alloc]init];
+    self.window.rootViewController = navController;
+    
+    switch (isStore) {
+        case 1:{
+            NSString *bundleId = [[NSBundle mainBundle] bundleIdentifier];
+//            NSLog(@"****************%@",bundleId);
+
+        }
+            break;
+        case 2:{
+            NSString *bundleId = [[NSBundle mainBundle] bundleIdentifier];
+//            NSLog(@"****************%@",bundleId);
+        }
+            break;
+    }
+    
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
